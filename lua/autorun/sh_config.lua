@@ -67,14 +67,14 @@ GalacticSystem.Persistence              = true
 -- Optional, Override Get Faction Method --
 --[[
 function GalacticSystem:OverrideGetFaction(ply)
-    -- return [number] from ply's Faction
+    -- return [string] (id) from ply's Faction
 end
 ]]
 
 -- Optional, Ovverride Get Permission Method --
 --[[
 function GalacticSystem:OverrideGetPermission(ply)
-    -- return [number] from ply's permission
+    -- return [table] from GalacticSystem.PermissionLevels
 end
 ]]
 
