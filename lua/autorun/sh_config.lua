@@ -42,7 +42,7 @@ GalacticSystem.EditFactionPermission    = 3
 
 -- Faction Start Money --
 -- The money a new faction has at beginning --
-GalacticSystem.FactionStartMoney        = 2000
+GalacticSystem.FactionStartMoney        = 50000
 
 -- Override get Faction Method --
 -- If you are using a custom faction system, you can override the get faction (see optional method below) --
@@ -181,13 +181,13 @@ GalacticSystem.PermissionLevels = {
  
 -- Faction Config --
 GalacticSystem.FactionInformation = {
-    imp = {
-        Name = "Galactic Empire", --Name of the Faction
-        Description = "Join the empire! Join the strongest force in the Universe! Join our fleet and crush the enemies of the Empire with an iron fist! Long live Emperor Palpetine!" --Description of the faction (should be a long text)
+    rep = {
+        Name = "Republic",
+        Description = "Join the republic! Fight against the KUS!"
     },
-    reb = {
-        Name = "Rebellion",
-        Description = "Join the rebellion! Fight against the monstrous empire and defend your rights! Help our fleet to deal them a blow and weaken the Empire!"
+    kus = {
+        Name = "KUS",
+        Description = "Join the kus! Fight against republic!"
     }
 }
 
@@ -246,7 +246,7 @@ GalacticSystem.ShipTypes = {
         hp = 200,
         firepower = 50,
         model = "models/tie2/tie2.mdl",
-        defaultName = "TIE-Fighter",
+        defaultName = "TIE-Fighter", 
         price = 20000,
     },
     tieAdvanced = {
@@ -290,6 +290,184 @@ GalacticSystem.ShipTypes = {
         model = "models/sfp_r41/sfp_r41.mdl",
         defaultName = "U-Wing",
         price = 25000,
+    },
+    
+    starDestroyerClassKanzler = {
+        hp = 80000,
+        firepower = 15000,
+        model = "models/props/starwars/furniture/scale_stardestroyer.mdl",
+        defaultName = "Liberator-Klasse Sternzerstörer",
+        price = 10000000,
+    },
+    starDestroyerClassLiberator = {
+        hp = 65000,
+        firepower = 12000,
+        model = "models/props/starwars/furniture/scale_stardestroyer.mdl",
+        defaultName = "Kanzler-Klasse Sternzerstörer",
+        price = 850000,
+    },
+    ValiantVentatorClass = {
+        hp = 35000,
+        firepower = 4000,
+        model = "models/starwars/ships/republic/republic attack cruiser.mdl",
+        defaultName = "Valiant-Venator-Klasse Sternenzerstörer",
+        price = 100000,
+    },
+    VenatorClass = {
+        hp = 10000,
+        firepower = 1500,
+        model = "models/bsp_raider/bsp_raider.mdl",
+        defaultName = "Venator-Klasse Sternenzerstörer",
+        price = 50000,
+    },
+    AcclamatorCruiser = {
+        hp = 8000,
+        firepower = 3000,
+        model = "models/sweaw/ships/rep_corvette_1st_servius.mdl",
+        defaultName = "Acclamator-Klasse Angriffskreuzer",
+        price = 32000,
+    },
+    GuardianClass = {
+        hp = 6000,
+        firepower = 500,
+        model = "models/skipray/skipray1.mdl",
+        defaultName = "Guardian-Klasse",
+        price = 22000,
+    },
+    SabreClass = {
+        hp = 6000,
+        firepower = 500,
+        model = "models/sfp_ig2000/sfp_ig2000.mdl",
+        defaultName = "Sabre-Klasse",
+        price = 10000,
+    },
+      lucrehulkClass = {
+        hp = 35000,
+        firepower = 1000,
+        model = "models/props/starwars/furniture/scale_stardestroyer.mdl",
+        defaultName = "Lucrehulk-Klasse Blockaden Raumstation",
+        price = 1,
+    },
+    subjugatorClass = {
+        hp = 20000,
+        firepower = 5000,
+        model = "models/props/starwars/furniture/scale_stardestroyer.mdl",
+        defaultName = "Subjugator-Klasse Schwerer Sternzerstörer",
+        price = 1,
+    },
+    dreadnoughtClass = {
+        hp = 20000,
+        firepower = 4000,
+        model = "models/starwars/ships/republic/republic attack cruiser.mdl",
+        defaultName = "Dreadnought-Providence-Klasse Sternenzerstörer",
+        price = 1,
+    },
+    providenceClass = {
+        hp = 10000,
+        firepower = 1500,
+        model = "models/bsp_raider/bsp_raider.mdl",
+        defaultName = "Providence-Klasse Sternenzerstörer",
+        price = 1,
+    },
+    munificentClass = {
+        hp = 8000,
+        firepower = 3000,
+        model = "models/sweaw/ships/rep_corvette_1st_servius.mdl",
+        defaultName = "Munificent-Klasse Sternenfrigatte",
+        price = 1,
+    },
+    recusantClass = {
+        hp = 6000,
+        firepower = 500,
+        model = "models/skipray/skipray1.mdl",
+        defaultName = "Recusant-Klasse Leichter Zerstörer",
+        price = 1,
+    },
+    sabaothClass = {
+        hp = 6000,
+        firepower = 500,
+        model = "models/sfp_ig2000/sfp_ig2000.mdl",
+        defaultName = "Sabaoth-Kreuzer",
+        price = 1,
+    },
+    --[[REP - Fighter]]
+    arc170 = {
+        hp = 200,
+        firepower = 90,
+        model = "models/sdog/arc170ch.mdl",
+        defaultName = "ARC-170",
+        price = 1600,
+    },
+    btlbYwing = {
+        hp = 900,
+        firepower = 60,
+        model = "models/ywing/ywing_btlb_test.mdl",
+        defaultName = "BTLB Y-Wing",
+        price = 2000,
+    },
+    V19 = {
+        hp = 500,
+        firepower = 20,
+        model = "models/sweaw/ships/rep_v19torrent.mdl",
+        defaultName = "V-19 Torrent Starfighter",
+        price = 500,
+    },
+    Vwing = {
+        hp = 160,
+        firepower = 60,
+        model = "models/vwing/vwing1.mdl",
+        defaultName = "V-Wing",
+        price = 700,
+    },
+    Z95 = {
+        hp = 500,
+        firepower = 40,
+        model = "models/z95/z951.mdl",
+        defaultName = "Z-95 Headhunter",
+        price = 1000,
+    },
+    Laat = {
+        hp = 1200,
+        firepower = 5,
+        model = "models/blu/laat.mdl",
+        defaultName = "Laat/i",
+        price = 500,
+    },
+    --[[KUS - Fighter]]
+      trifighter = {
+        hp = 200,
+        firepower = 90,
+        model = "models/sdog/arc170ch.mdl",
+        defaultName = "Droiden Tri-Fighter",
+        price = 1,
+    },
+    hyenaBomber = {
+        hp = 900,
+        firepower = 60,
+        model = "models/ywing/ywing_btlb_test.mdl",
+        defaultName = "Hyena-Class Bomber",
+        price = 1,
+    },
+    advancedbomber = {
+        hp = 500,
+        firepower = 20,
+        model = "models/sweaw/ships/rep_v19torrent.mdl",
+        defaultName = "Vulture Advanced Bomber",
+        price = 1,
+    },
+    hmpGunship = {
+        hp = 160,
+        firepower = 60,
+        model = "models/vwing/vwing1.mdl",
+        defaultName = "HMP Droiden Gunship",
+        price = 1,
+    },
+    Vulture = {
+        hp = 500,
+        firepower = 40,
+        model = "models/z95/z951.mdl",
+        defaultName = "Vulture Droid",
+        price = 1,
     },
 }
 
@@ -404,18 +582,166 @@ GalacticSystem.SpaceStations = {
         starter = true,
         price = 3000000,
     },
+    RepublicSectorSmall = {
+        factionId = "rep",
+        ships = {
+            "Vwing",
+            "Z95",
+            "Laat",
+        },
+        hp = 1000,
+        firepower = 25,
+        upgradesTo = "RepublicSectorMedium",
+        name = "Kleine Sektor Raumstation",
+        starter = true,
+        price = 500,
+      },
+      RepublicSectorMedium = {
+        factionId = "rep",
+        ships = {
+            "Vwing",
+            "Z95",
+            "Laat",
+            "SabreClass",
+            "GuardianClass",
+            "AcclamatorCruiser",
+        },
+        hp = 5000,
+        firepower = 500,
+        upgradesTo = "RepublicSektorBig",
+        name = "Mittlere Sektor Raumstation",
+        starter = false,
+        price = 50000,
+      },
+      RepublicSektorBig = {
+        factionId = "rep",
+        ships = {
+            "arc170",
+            "Vwing",
+            "Z95",
+            "Laat",
+            "SabreClass",
+            "GuardianClass",
+            "AcclamatorCruiser",
+            "VenatorClass",
+        },
+        hp = 12000,
+        firepower = 1000,
+        upgradesTo = "RepublicHuge",
+        name = "Kleine Haupt Raumstation",
+        starter = false,
+        price = 300000,
+      },
+   
+      RepublicHuge = {
+        factionId = "rep",
+        ships = {
+            "arc170",
+            "btlbYwing",
+            "V19",
+            "Vwing",
+            "Z95",
+            "Laat",
+            "SabreClass",
+            "GuardianClass",
+            "AcclamatorCruiser",
+            "VenatorClass",
+            "ValiantVentatorClass",
+        },
+        hp = 30000,
+        firepower = 2000,
+        upgradesTo = "RepublicGiant",
+        name = "Haupt Raumstation",
+        starter = false,
+        price = 500000,
+      },
+   
+      RepublicGiant = {
+        factionId = "rep",
+        ships = {
+            "arc170",
+            "btlbYwing",
+            "V19",
+            "Vwing",
+            "Z95",
+            "Laat",
+            "SabreClass",
+            "GuardianClass",
+            "AcclamatorCruiser",
+            "VenatorClass",
+            "ValiantVentatorClass",
+            "starDestroyerClassLiberator",
+            "starDestroyerClassKanzler",
+        },
+        hp = 40000,
+        firepower = 3000,
+        name = "Große Haupt Raumstation",
+        starter = false,
+        price = 2000000,
+      },
+        KusSmall = {
+        factionId = "kus",
+        ships = {
+            "Vulture",
+            "hyenaBomber",
+            "trifighter",
+            "lucrehulkClass",
+            "dreadnoughtClass",
+                "munificentClass",
+                "sabaothClass",
+        },
+        hp = 2000,
+        firepower = 205,
+        upgradesTo = "KusMedium",
+        name = "KUS Kleine Raumstation",
+        starter = true,
+        price = 500,
+      },
+      KusMedium = {
+        factionId = "kus",
+        ships = {
+            "Vulture",
+            "hmpGunship",
+            "hyenaBomber",
+            "trifighter",
+            "lucrehulkClass",
+            "dreadnoughtClass",
+            "providenceClass",
+            "munificentClass",
+            "sabaothClass",
+        },
+        hp = 15000,
+        firepower = 1500,
+        upgradesTo = "KusBig",
+        name = "KUS Sektor Raumstation",
+        starter = false,
+        price = 50000,
+      },
+      KusBig = {
+        factionId = "kus",
+        ships = {
+            "Vulture",
+            "hmpGunship",
+            "advancedbomber",
+            "hyenaBomber",
+            "trifighter",
+            "lucrehulkClass",
+            "subjugatorClass",
+            "dreadnoughtClass",
+            "providenceClass",
+            "munificentClass",
+            "recusantClass",
+            "sabaothClass",
+        },
+        hp = 100000,
+        firepower = 5000,
+        name = "KUS Haupt Raumstation",
+        starter = false,
+        price = 600000,
+      },
 }
 
 GalacticSystem.PlanetInformation = {
-    tython = {
-        PositionX = 485,                -- This is a bit complicated. The map is a 1200 pixel x and 800 pixel y image. This defines where on X the planet should begin (size of the planet is 50x50) 
-        PositionY = 285,                -- This is a bit complicated. The map is a 1200 pixel x and 800 pixel y image. This defines where on Y the planet should begin (size of the planet is 50x50) 
-        BuildSlotGround = 3,            -- How many ground build slots does this planet have. Currently there are only mines to build, maybe there will be more buildings in future
-        SlotSpace = 3,                  -- How many fleets can hover above this planet
-        Name = "Tython",                -- The name of this planet
-        Icon = "planets/tython.png",    -- The image of this planet. The image should be in yourworkshopaddon/materials/planets/planetname.png and should have an ideal size of 200x200 (at least this ratio)
-        BasePlanet = false,             -- Is this a starter planet? A starter planet can not be attacked / conquered, so it always belongs to the given faction
-    },
     coruscant = {
         PositionX = 485,
         PositionY = 210,
@@ -425,44 +751,62 @@ GalacticSystem.PlanetInformation = {
         Name = "Coruscant",
         Icon = "planets/coruscant.png",
         BasePlanet = true,
-        Faction = "imp",
+        Faction = "rep",
+    },
+    geonosis = {
+        PositionX = 900,
+        PositionY = 600,
+        BuildSlotGround = 4,
+        BuildSlotSpace = 1,
+        SlotSpace = 4,
+        Name = "Geonosis",
+        Icon = "planets/geonosis.png",
+        BasePlanet = true,
+        Faction = "kus",
+    },
+    tython = {
+        PositionX = 485,
+        PositionY = 285,
+        BuildSlotGround = 3,
+        BuildSlotSpace = 3,
+        SlotSpace = 3,
+        Name = "Tython",
+        Icon = "planets/tython.png"
     },
     korriban = {
-        PositionX = 800,
+        PositionX = 790,
         PositionY = 150,
         BuildSlotGround = 3,
         BuildSlotSpace = 1,
         SlotSpace = 3,
         Name = "Korriban",
-        Icon = "planets/korriban.png",
+        Icon = "planets/korriban.png"
     },
     tatooine = {
-        PositionX = 900,
-        PositionY = 600,
+        PositionX = 850,
+        PositionY = 550,
         BuildSlotGround = 4,
         BuildSlotSpace = 1,
         SlotSpace = 2,
         Name = "Tatooine",
         Icon = "planets/tatooine.png"
     },
-    kashyyk = {
-        PositionX = 720,
-        PositionY = 370,
+    kashyyyk = {
+        PositionX = 700,
+        PositionY = 210,
         BuildSlotGround = 1,
         BuildSlotSpace = 1,
         SlotSpace = 3,
-        Name = "Kashyyk",
-        Icon = "planets/kashyyk.png",
-        BasePlanet = true,
-        Faction = "reb",
+        Name = "Kashyyyk",
+        Icon = "planets/kashyyk.png"
     },
     ordmandell = {
-        PositionX = 500,
-        PositionY = 100,
+        PositionX = 490,
+        PositionY = 130,
         BuildSlotGround = 2,
         BuildSlotSpace = 1,
         SlotSpace = 3,
-        Name = "Ord Mandell",
+        Name = "Ord Mantell",
         Icon = "planets/ordmandell.png"
     },
     dantooine = {
@@ -493,8 +837,8 @@ GalacticSystem.PlanetInformation = {
         Icon = "planets/kuat.png"
     },
     naboo = {
-        PositionX = 640,
-        PositionY = 480,
+        PositionX = 670,
+        PositionY = 630,
         BuildSlotGround = 2,
         BuildSlotSpace = 1,
         SlotSpace = 3,
@@ -503,7 +847,7 @@ GalacticSystem.PlanetInformation = {
     },
     rishi = {
         PositionX = 1050,
-        PositionY = 440,
+        PositionY = 480,
         BuildSlotGround = 2,
         BuildSlotSpace = 1,
         SlotSpace = 3,
@@ -512,7 +856,7 @@ GalacticSystem.PlanetInformation = {
     },
     zeffo = {
         PositionX = 980,
-        PositionY = 560,
+        PositionY = 550,
         BuildSlotGround = 2,
         BuildSlotSpace = 1,
         SlotSpace = 3,
@@ -529,12 +873,147 @@ GalacticSystem.PlanetInformation = {
         Icon = "planets/hoth.png"
     },
     rhenvar = {
-        PositionX = 900,
-        PositionY = 120,
+        PositionX = 790,
+        PositionY = 230,
         BuildSlotGround = 2,
         BuildSlotSpace = 1,
         SlotSpace = 3,
         Name = "Rhen Var",
+        Icon = "planets/rhenvar.png"
+    },
+    anaxes = {
+        PositionX = 550,
+        PositionY = 170,
+        BuildSlotGround = 3,
+        BuildSlotSpace = 1,
+        SlotSpace = 2,
+        Name = "Anaxes",
+        Icon = "planets/anaxes.png"
+    },
+    christophsis = {
+        PositionX = 850,
+        PositionY = 615,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Christophsis",
+        Icon = "planets/christophsis.png"
+    },
+    felucia = {
+        PositionX = 835,
+        PositionY = 210,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Felucia",
+        Icon = "planets/felucia.png"
+    },
+    florrum = {
+        PositionX = 850,
+        PositionY = 140,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Florrum",
+        Icon = "planets/florrum.png"
+    },
+    fondor = {
+        PositionX = 490,
+        PositionY = 360,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Fondor",
+        Icon = "planets/fondor.png"
+    },
+    kamino = {
+        PositionX = 1025,
+        PositionY = 530,
+        BuildSlotGround = 4,
+        BuildSlotSpace = 1,
+        SlotSpace = 4,
+        Name = "Kamino",
+        Icon = "planets/kamino.png"
+    },
+    mandalore = {
+        PositionX = 660,
+        PositionY = 100,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 3,
+        Name = "Mandalore",
+        Icon = "planets/mandalore.png"
+    },
+    mustafa = {
+        PositionX = 470,
+        PositionY = 700,
+        BuildSlotGround = 1,
+        BuildSlotSpace = 1,
+        SlotSpace = 3,
+        Name = "Mustafar",
+        Icon = "planets/mustafa.png"
+    },
+    mygeeto = {
+        PositionX = 450,
+        PositionY = 70,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Mygeeto",
+        Icon = "planets/mygeeto.png",
+    },
+    ryloth = {
+        PositionX = 960,
+        PositionY = 630,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Ryloth",
+        Icon = "planets/ryloth.png",
+    },
+    taris = {
+        PositionX = 615,
+        PositionY = 110,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 3,
+        Name = "Taris",
+        Icon = "planets/taris.png"
+    },
+    trandosha = {
+        PositionX = 740,
+        PositionY = 180,
+        BuildSlotGround = 1,
+        BuildSlotSpace = 1,
+        SlotSpace = 3,
+        Name = "Trandosha",
+        Icon = "planets/trandosha.png"
+    },
+    narshaddaa = {
+        PositionX = 700,
+        PositionY = 380,
+        BuildSlotGround = 1,
+        BuildSlotSpace = 1,
+        SlotSpace = 3,
+        Name = "Nar Shaddaa",
+        Icon = "planets/rhenvar.png"
+    },
+    utapau = {
+        PositionX = 530,
+        PositionY = 700,
+        BuildSlotGround = 1,
+        BuildSlotSpace = 1,
+        SlotSpace = 3,
+        Name = "Utapau",
+        Icon = "planets/ordmantell.png"
+    },
+    corellia = {
+        PositionX = 580,
+        PositionY = 330,
+        BuildSlotGround = 2,
+        BuildSlotSpace = 1,
+        SlotSpace = 1,
+        Name = "Corellia",
         Icon = "planets/rhenvar.png"
     },
 }
