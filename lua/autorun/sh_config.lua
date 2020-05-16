@@ -67,16 +67,32 @@ GalacticSystem.Persistence              = true
 -- Optional, Override Get Faction Method --
 --[[
 function GalacticSystem:OverrideGetFaction(ply)
-    -- return [string] (id) from ply's Faction
+    -- return [id - string] from ply's Faction
 end
 ]]
 
 -- Optional, Ovverride Get Permission Method --
 --[[
 function GalacticSystem:OverrideGetPermission(ply)
-    -- return [table] from GalacticSystem.PermissionLevels
+    -- return [table] from ply's permissionlevel
 end
 ]]
+
+-- Optional, Ovverride Is Diplomat Method --
+--[[
+function GalacticSystem:OverrideIsDiplomat(ply)
+    -- return [boolean] is ply diplomat?
+end
+]]  
+
+-- Optional, Edit this hook for your gamemode --
+hook.Add("GalacticSystem.OnPurchase", "GalacticSystem.OnPurchaseConfigHook", function(buildtype, type, factionId) -- BuildType = ("ship" or "spacestation" or "mine")
+    if false then
+        return false, "this is an example to block purchase"
+    else
+        return true
+    end
+end)
 
 -- Get Money Method --
 -- If your using DarkRP you should be fine, otherwise edit the method, so that it returns the number of given players money --
@@ -190,7 +206,6 @@ GalacticSystem.FactionInformation = {
         Description = "Join the kus! Fight against republic!"
     }
 }
-
 -- Ship Config --
 GalacticSystem.ShipTypes = {
     starDestroyerClass1 = {                                                     -- Ship Class Name, (No Spaces, no Special character, etc.)
@@ -346,49 +361,49 @@ GalacticSystem.ShipTypes = {
         firepower = 1000,
         model = "models/props/starwars/furniture/scale_stardestroyer.mdl",
         defaultName = "Lucrehulk-Klasse Blockaden Raumstation",
-        price = 1,
+        price = 90000,
     },
     subjugatorClass = {
         hp = 20000,
         firepower = 5000,
         model = "models/props/starwars/furniture/scale_stardestroyer.mdl",
         defaultName = "Subjugator-Klasse Schwerer Sternzerstörer",
-        price = 1,
+        price = 70000,
     },
     dreadnoughtClass = {
         hp = 20000,
         firepower = 4000,
         model = "models/starwars/ships/republic/republic attack cruiser.mdl",
         defaultName = "Dreadnought-Providence-Klasse Sternenzerstörer",
-        price = 1,
+        price = 50000,
     },
     providenceClass = {
         hp = 10000,
         firepower = 1500,
         model = "models/bsp_raider/bsp_raider.mdl",
         defaultName = "Providence-Klasse Sternenzerstörer",
-        price = 1,
+        price = 30000,
     },
     munificentClass = {
         hp = 8000,
         firepower = 3000,
         model = "models/sweaw/ships/rep_corvette_1st_servius.mdl",
         defaultName = "Munificent-Klasse Sternenfrigatte",
-        price = 1,
+        price = 30000,
     },
     recusantClass = {
         hp = 6000,
         firepower = 500,
         model = "models/skipray/skipray1.mdl",
         defaultName = "Recusant-Klasse Leichter Zerstörer",
-        price = 1,
+        price = 15000,
     },
     sabaothClass = {
         hp = 6000,
         firepower = 500,
         model = "models/sfp_ig2000/sfp_ig2000.mdl",
         defaultName = "Sabaoth-Kreuzer",
-        price = 1,
+        price = 15000,
     },
     --[[REP - Fighter]]
     arc170 = {
@@ -439,35 +454,35 @@ GalacticSystem.ShipTypes = {
         firepower = 90,
         model = "models/sdog/arc170ch.mdl",
         defaultName = "Droiden Tri-Fighter",
-        price = 1,
+        price = 250,
     },
     hyenaBomber = {
         hp = 900,
         firepower = 60,
         model = "models/ywing/ywing_btlb_test.mdl",
         defaultName = "Hyena-Class Bomber",
-        price = 1,
+        price = 1000,
     },
     advancedbomber = {
         hp = 500,
         firepower = 20,
         model = "models/sweaw/ships/rep_v19torrent.mdl",
         defaultName = "Vulture Advanced Bomber",
-        price = 1,
+        price = 500,
     },
     hmpGunship = {
         hp = 160,
         firepower = 60,
         model = "models/vwing/vwing1.mdl",
         defaultName = "HMP Droiden Gunship",
-        price = 1,
+        price = 500,
     },
     Vulture = {
         hp = 500,
         firepower = 40,
         model = "models/z95/z951.mdl",
         defaultName = "Vulture Droid",
-        price = 1,
+        price = 500,
     },
 }
 
