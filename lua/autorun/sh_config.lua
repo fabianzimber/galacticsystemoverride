@@ -64,6 +64,9 @@ GalacticSystem.FontTitle                = "Trebuchet48"
 -- If the data should be stored in txt files, every time something changes. If this is false, the setup factions / planets / fleets will reset on restart --
 GalacticSystem.Persistence              = true
 
+-- Map Background --
+GalacticSystem.MapBackground            = "planets/overview.png"
+
 -- Optional, Override Get Faction Method --
 --[[
 function GalacticSystem:OverrideGetFaction(ply)
