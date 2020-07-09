@@ -20,6 +20,10 @@ GalacticSystem = GalacticSystem or {}
 -- You can test around with this number. Sets how long the travel time for a fleet is --
 GalacticSystem.BaseSpeed                = 10
 
+-- Command Enabled --
+-- If you want the players to only use the new consoles, you can disaable the command with "Disabled" --
+GalacticSystem.UseCommand = "Enabled"
+
 -- Mine Earning --
 -- Every mine of a faction gives this value in the mine intervall. Remember that a faction can have multiple planets with multiple mines --
 GalacticSystem.MineEarning              = 200
