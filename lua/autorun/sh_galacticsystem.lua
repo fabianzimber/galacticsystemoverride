@@ -61,8 +61,8 @@ GalacticSystem.NeutralColor             = Color(255, 255, 0) -- Color of neutral
 -- Fonts --
 GalacticSystem.FontSmall                = "Trebuchet18"
 GalacticSystem.FontMedium               = "Trebuchet24"
-GalacticSystem.FontBig                  = "Trebuchet32"
-GalacticSystem.FontTitle                = "Trebuchet48"
+GalacticSystem.FontBig                  = "Trebuchet24"
+GalacticSystem.FontTitle                = "Trebuchet24"
 
 -- Persistence --
 -- If the data should be stored in txt files, every time something changes. If this is false, the setup factions / planets / fleets will reset on restart --
